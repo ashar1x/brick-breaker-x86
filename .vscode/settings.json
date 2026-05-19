@@ -1,0 +1,17 @@
+{
+  "files.associations": {
+    "*.asm": "asm",
+    "*.inc": "asm"
+  },
+  "[asm]": {
+    "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?",
+    "editor.defaultFormatter": null,
+    "editor.formatOnSave": false
+  },
+  "editor.rulers": [80],
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "chat.tools.terminal.autoApprove": {
+    "ml.exe": true
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build with MASM32 (ml.exe)",
+      "type": "shell",
+      "command": "cmd.exe",
+      "args": [
+        "/c",
+        "ml.exe /c /Zd /coff /I\"C:\\masm32\\include\" \"${file}\" && link /SUBSYSTEM:CONSOLE /LIBPATH:\"C:\\masm32\\lib\" \"${fileDirname}\\${fileBasenameNoExtension}.obj\" Irvine32.lib kernel32.lib user32.lib winmm.lib"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run Executable",
+      "type": "shell",
+      "command": "\"${fileDirname}\\${fileBasenameNoExtension}.exe\"",
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always"
+      }
+    }
+  ]
+}
